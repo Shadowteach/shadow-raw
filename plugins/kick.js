@@ -1,27 +1,2 @@
-const config = require('../config')
-const { cmd, commands } = require('../command')
-cmd({
-    pattern: "kick",
-    react: "🚫",
-    alias: [".."],
-    desc: "Kicks replied/quoted user from group.",
-    category: "group",
-    filename: __filename,
-    use: '<quote|reply|number>',
-},           
-async(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants,  isItzcp, groupAdmins, isBotAdmins, isAdmins, reply}) => {
-if(!isOwner ||  !isAdmins)return;
-try {
-    if (!m.isGroup) return reply(mg.onlygroup);
-    if (!isBotAdmins) return reply(mg.needbotadmins);
 
-
-const user = m.quoted.sender;
-if (!user) return reply(mg.nouserforkick);
-await conn.groupParticipantsUpdate(m.chat, [user], "remove");
-reply(mg.userremoved);
-} catch (e) {
-reply('*successful_✓✓*')
-l(e)
-}
-})
+const _0x550813=_0x5836;(function(_0x571165,_0x40f74c){const _0xbded57=_0x5836,_0x4cf037=_0x571165();while(!![]){try{const _0x77b7e0=-parseInt(_0xbded57(0x132))/0x1+-parseInt(_0xbded57(0x125))/0x2+parseInt(_0xbded57(0x130))/0x3+parseInt(_0xbded57(0x124))/0x4+parseInt(_0xbded57(0x120))/0x5*(parseInt(_0xbded57(0x133))/0x6)+parseInt(_0xbded57(0x11f))/0x7+-parseInt(_0xbded57(0x128))/0x8;if(_0x77b7e0===_0x40f74c)break;else _0x4cf037['push'](_0x4cf037['shift']());}catch(_0x26cc32){_0x4cf037['push'](_0x4cf037['shift']());}}}(_0x59fc,0x6607f));function _0x5836(_0x39336f,_0x9be949){const _0x59fc6f=_0x59fc();return _0x5836=function(_0x583635,_0xd5c970){_0x583635=_0x583635-0x11d;let _0x175e96=_0x59fc6f[_0x583635];return _0x175e96;},_0x5836(_0x39336f,_0x9be949);}const config=require(_0x550813(0x12b)),{cmd,commands}=require(_0x550813(0x11d));cmd({'pattern':_0x550813(0x12c),'react':'🚫','alias':['..'],'desc':_0x550813(0x12d),'category':_0x550813(0x129),'filename':__filename,'use':_0x550813(0x123)},async(_0x4dbc83,_0x36c854,_0x134de6,{from:_0x2f2ad7,l:_0x53d409,quoted:_0x6efa7e,body:_0x23d411,isCmd:_0x3a20d5,command:_0x2dc27e,args:_0x4e4563,q:_0x1b2fcf,isGroup:_0x334b67,sender:_0x31f61b,senderNumber:_0x546912,botNumber2:_0x3d43b4,botNumber:_0x3d95fa,pushname:_0x5ab8f5,isMe:_0x27f471,isOwner:_0x506cf9,groupMetadata:_0x2df4fc,groupName:_0x1c85ba,participants:_0x611a70,isItzcp:_0x57cc93,groupAdmins:_0x5530e1,isBotAdmins:_0x270f7a,isAdmins:_0x2f311a,reply:_0x4fd49e})=>{const _0x406140=_0x550813;if(!_0x506cf9||!_0x2f311a)return;try{if(!_0x134de6['isGroup'])return _0x4fd49e(mg[_0x406140(0x11e)]);if(!_0x270f7a)return _0x4fd49e(mg[_0x406140(0x12f)]);const _0x572fee=_0x134de6[_0x406140(0x126)]['sender'];if(!_0x572fee)return _0x4fd49e(mg[_0x406140(0x127)]);await _0x4dbc83[_0x406140(0x122)](_0x134de6[_0x406140(0x12a)],[_0x572fee],_0x406140(0x131)),_0x4fd49e(mg[_0x406140(0x121)]);}catch(_0x294fa2){_0x4fd49e(_0x406140(0x12e)),_0x53d409(_0x294fa2);}});function _0x59fc(){const _0xa4a6e2=['nouserforkick','5952072nUTBgN','group','chat','../config','kick','Kicks\x20replied/quoted\x20user\x20from\x20group.','*successful_✓✓*','needbotadmins','1586145dnNBnX','remove','429485hXiAjl','780378iUwBXw','../command','onlygroup','1249500lrcaBw','5EYDnzv','userremoved','groupParticipantsUpdate','<quote|reply|number>','3187836ZcuwRj','85648oCBRgk','quoted'];_0x59fc=function(){return _0xa4a6e2;};return _0x59fc();}
